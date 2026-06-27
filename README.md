@@ -52,11 +52,11 @@ The application prints a final execution summary including the total number of e
 
 ### STM32 Firmware
 
-Open the `STM32PeripheralTester` project in **STM32CubeIDE**, select the desired build configuration (**Debug** or **Release**), then build and flash the firmware to the STM32 board.
+Open the `STM32PeripheralTester` project in **STM32CubeIDE**, select the desired build configuration (**Debug** or **Release**), then build, flash, and run the firmware.
 
 ### Linux Server
 
-Build the Linux application using `make`:
+Build the Linux application:
 
 ```bash
 cd STM32_Server
@@ -64,6 +64,12 @@ make
 ```
 
 The executable `stm32_server` will be generated in the same directory.
+
+Open the STM32 serial console:
+
+```bash
+sudo minicom -D /dev/ttyACM0 -b 115200
+```
 
 Run the server:
 
