@@ -29,7 +29,7 @@ The system follows a client-server architecture: the Linux server generates UDP 
 
 ![Architecture](docs/images/architecture.png)
 
-
+<br>
 
 ## Hardware Setup
 
@@ -37,7 +37,7 @@ The project was validated on an STM32 Nucleo-F756ZG development board. The perip
 
 ![Hardware Setup](docs/images/running_system.jpg)
 
-
+<br>
 
 ## Example Execution
 
@@ -49,7 +49,7 @@ The application prints a final execution summary including the total number of e
 
 ![Execution Summary](docs/images/end_running_summary.png)
 
-
+<br>
 
 ## Build
 
