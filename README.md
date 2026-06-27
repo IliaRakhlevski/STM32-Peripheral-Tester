@@ -34,7 +34,7 @@ The system follows a client-server architecture: the Linux server generates UDP 
 
 The project was validated on an STM32 Nucleo-F756ZG development board. The peripherals are interconnected using jumper wires to enable UART, SPI, I²C, ADC, and timer self-tests.
 
-![Hardware Setup](docs/images/running_system.png)
+![Hardware Setup](docs/images/running_system.jpg)
 
 
 ## Example Execution
