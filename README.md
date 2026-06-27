@@ -48,13 +48,6 @@ The application prints a final execution summary including the total number of e
 ![Execution Summary](docs/images/end_running_summary.png)
 
 
-## Hardware Setup
-
-The project was validated on an STM32 Nucleo-F756ZG development board connected to a Linux host via Ethernet and USB.
-
-![Running System](docs/images/running_system.jpg)
-
-
 ## Build
 
 ### STM32 Firmware
