@@ -30,11 +30,13 @@ The system follows a client-server architecture: the Linux server generates UDP 
 ![Architecture](docs/images/architecture.png)
 
 
+
 ## Hardware Setup
 
 The project was validated on an STM32 Nucleo-F756ZG development board. The peripherals are interconnected using jumper wires to enable UART, SPI, I²C, ADC, and timer self-tests.
 
 ![Hardware Setup](docs/images/running_system.jpg)
+
 
 
 ## Example Execution
@@ -46,6 +48,7 @@ The Linux server continuously generates test commands and sends them to the STM3
 The application prints a final execution summary including the total number of executed tests, passed tests, failed tests, pending responses, and the overall success rate.
 
 ![Execution Summary](docs/images/end_running_summary.png)
+
 
 
 ## Build
