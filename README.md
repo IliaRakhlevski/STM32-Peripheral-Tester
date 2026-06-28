@@ -51,6 +51,42 @@ The application prints a final execution summary including the total number of e
 
 <br>
 
+## Test Results Database
+
+All executed tests are automatically stored in an SQLite database.
+
+Each record contains:
+
+- Test ID
+- Peripheral under test
+- Number of iterations
+- Payload size
+- Start timestamp
+- Completion timestamp
+- Test result (PASS / FAIL)
+
+This allows:
+- reviewing historical test results;
+- filtering tests by peripheral;
+- analyzing execution time;
+- collecting long-term reliability statistics.
+
+The SQLite database stores the following information for every executed test:
+
+| Field | Description |
+|-------|-------------|
+| test_id | Unique test identifier |
+| peripheral | Tested peripheral (UART, SPI, I²C, ADC, TIMER) |
+| iterations | Number of iterations |
+| payload_len | Payload size in bytes |
+| sent_time | Command transmission timestamp |
+| received_time | Response reception timestamp |
+| result | PASS / FAIL |
+
+![SQLite Database](docs/images/results_database.png)
+
+<br>
+
 ## Build
 
 ### STM32 Firmware
