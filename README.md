@@ -83,6 +83,8 @@ The SQLite database stores the following information for every executed test:
 | received_time | Response reception timestamp |
 | result | PASS / FAIL |
 
+<br>
+
 ![SQLite Database](docs/images/results_database.png)
 
 <br>
