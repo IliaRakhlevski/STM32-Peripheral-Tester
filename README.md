@@ -82,6 +82,7 @@ The SQLite database stores the following information for every executed test:
 | sent_time | Command transmission timestamp |
 | received_time | Response reception timestamp |
 | result | PASS / FAIL |
+| status | Response state (pending, received, failed) |
 
 <br>
 
