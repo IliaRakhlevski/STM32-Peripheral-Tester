@@ -59,11 +59,11 @@ static void app_timer_test_run(const app_protocol_command_t *command)
 	app_protocol_response_t response;
 	uint8_t test_passed = 1U;
 
-	response.test_id = command->test_id;
-	response.result = APP_PROTOCOL_TEST_SUCCESS;
-
 	if (command == NULL)
 	    return;
+
+	response.test_id = command->test_id;
+	response.result = APP_PROTOCOL_TEST_SUCCESS;
 
 	APP_LOG_DEBUG("Running timer test %lu\r\n", command->test_id);
 

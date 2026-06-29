@@ -23,9 +23,9 @@ static uint8_t last_link_state = 0xFF;
 static struct udp_pcb *app_udp_pcb = NULL;
 
 /* Remote end point of the last received command. */
-static ip_addr_t app_udp_remote_addr;
-static uint16_t app_udp_remote_port = 0U;
-static uint8_t app_udp_remote_valid = 0U;
+volatile static ip_addr_t app_udp_remote_addr;
+volatile static uint16_t app_udp_remote_port = 0U;
+volatile static uint8_t app_udp_remote_valid = 0U;
 
 
 /**
@@ -186,6 +186,8 @@ uint8_t app_net_udp_send_response(const app_protocol_response_t *response)
 {
 	struct pbuf *pbuf;
 	err_t err;
+	ip_addr_t remote_addr;
+	uint16_t remote_port;
 
 	if ((response == NULL) ||
 		(app_udp_pcb == NULL) ||
@@ -204,10 +206,10 @@ uint8_t app_net_udp_send_response(const app_protocol_response_t *response)
 
 	memcpy(pbuf->payload, response, sizeof(app_protocol_response_t));
 
-	err = udp_sendto(app_udp_pcb,
-					 pbuf,
-					 &app_udp_remote_addr,
-					 app_udp_remote_port);
+	remote_addr = app_udp_remote_addr;
+	remote_port = app_udp_remote_port;
+
+	err = udp_sendto(app_udp_pcb, pbuf, &remote_addr, remote_port);
 
 	pbuf_free(pbuf);
 
