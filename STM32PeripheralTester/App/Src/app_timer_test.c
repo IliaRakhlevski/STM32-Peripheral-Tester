@@ -165,9 +165,9 @@ static void app_timer_test_task(void *argument)
 						   command.test_id,
 						   command.iterations,
 						   command.pattern_len);
-        }
 
-        app_timer_test_run(&command);
+        	app_timer_test_run(&command);
+        }
     }
 }
 
