@@ -137,22 +137,22 @@ void StartDefaultTask(void const * argument)
   MX_LWIP_Init();
   /* USER CODE BEGIN StartDefaultTask */
 
-  /* Temporary network polling for debugging.
-   * Remove before the final release.
-   */
-  app_net_init();
-  printf("Network initialized\r\n");
-
   /* Initialize application modules. */
+  app_response_queue_init();
+  app_command_queue_init();
   app_timer_test_init();
   app_uart_test_init();
   app_i2c_test_init();
   app_spi_test_init();
   app_adc_test_init();
-  app_response_queue_init();
-  app_command_queue_init();
 
   printf("Peripheral test modules initialized\r\n");
+
+  /* Temporary network polling for debugging.
+   * Remove before the final release.
+   */
+  app_net_init();
+  printf("Network initialized\r\n");
 
   printf("Start main loop\r\n");
 
