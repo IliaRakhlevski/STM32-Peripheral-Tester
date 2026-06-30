@@ -19,7 +19,6 @@ The STM32 firmware executes independent peripheral tests for UART, SPI, I²C, AD
 - STM32Cube HAL
 - FreeRTOS (CMSIS-RTOS v2)
 - lwIP
-- CMSIS
 
 ### Development Tools
 - STM32CubeIDE
