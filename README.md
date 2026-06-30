@@ -10,7 +10,7 @@ The STM32 firmware executes independent peripheral tests for UART, SPI, I²C, AD
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 ### Hardware
 - STM32 Nucleo-F756ZG
