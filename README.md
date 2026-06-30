@@ -10,6 +10,28 @@ The STM32 firmware executes independent peripheral tests for UART, SPI, I²C, AD
 
 ---
 
+# Technology Stack
+
+### Hardware
+- STM32 Nucleo-F756ZG
+
+### Frameworks & Libraries
+- STM32Cube HAL
+- FreeRTOS (CMSIS-RTOS v2)
+- lwIP
+- CMSIS
+
+### Development Tools
+- STM32CubeIDE
+- STM32CubeMX
+- GCC Arm Embedded Toolchain
+
+### Languages
+- C
+- C++ (server-side components, if applicable)
+
+<br>
+
 ## Features
 
 - Parallel execution of independent peripheral tests
@@ -22,6 +44,7 @@ The STM32 firmware executes independent peripheral tests for UART, SPI, I²C, AD
 - Runtime execution statistics
 - SQLite database for test result tracking
 
+<br>
 
 ## Architecture
 
