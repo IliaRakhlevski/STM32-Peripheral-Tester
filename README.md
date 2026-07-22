@@ -5,7 +5,7 @@
 ## ARM Embedded Systems Final Project
 
 The project developed as part of the ARM Embedded Systems course.
-The project implements an automated hardware validation system for the STM32F756ZG Nucleo development board. A Linux UDP server generates test commands, sends them to the STM32 board over Ethernet, collects execution results, and displays real-time statistics.
+It implements an automated hardware validation system for the STM32F756ZG Nucleo development board. A Linux UDP server generates test commands, sends them to the STM32 board over Ethernet, collects execution results, and displays real-time statistics.
 The STM32 firmware executes independent peripheral tests for UART, SPI, I²C, ADC, and Timer modules under FreeRTOS. Multiple tests can run concurrently, demonstrating parallel peripheral verification using a client-server architecture.
 
 ---
