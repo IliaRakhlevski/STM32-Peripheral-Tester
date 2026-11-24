@@ -9,6 +9,9 @@
 STM32PeripheralTester/Debug/
 STM32PeripheralTester/Release/
 
+# Command-line (Makefile) build output
+STM32PeripheralTester/build/
+
 # STM32CubeIDE launch configurations
 *.launch
 

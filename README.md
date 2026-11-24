@@ -1,5 +1,7 @@
 # STM32 Peripheral Tester
 
+[![CI](https://github.com/IliaRakhlevski/STM32-Peripheral-Tester/actions/workflows/ci.yml/badge.svg)](https://github.com/IliaRakhlevski/STM32-Peripheral-Tester/actions/workflows/ci.yml)
+
 ## [Real Time Group](https://rt-ed.co.il/) - a multi-disciplinary Real-Time O.S. and Embedded Software Solutions Center, providing consulting, development, integration, training and support solutions.<br/>
 
 The project implements an automated hardware validation system for the STM32F756ZG Nucleo development board. A Linux UDP server generates test commands, sends them to the STM32 board over Ethernet, collects execution results, and displays real-time statistics.
