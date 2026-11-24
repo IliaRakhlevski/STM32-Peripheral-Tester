@@ -1,0 +1,48 @@
+# CI for STM32-Peripheral-Tester.
+#
+# On every push to main and on every pull request:
+#   1. The STM32 firmware is built with arm-none-eabi-gcc
+#      (same settings as the STM32CubeIDE Debug configuration).
+#   2. The Linux UDP server (STM32_Server) is built with its Makefile (-Werror).
+# Not covered here (needs the real board): running the tests over Ethernet.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  firmware-build:
+    name: STM32 - firmware build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GNU Arm Embedded Toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi
+
+      - name: Build firmware
+        run: make -C STM32PeripheralTester
+
+  server-build:
+    name: Linux - STM32_Server build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsqlite3-dev
+
+      - name: Build server
+        run: make -C STM32_Server
